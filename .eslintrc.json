@@ -1,21 +1,7 @@
 {
   "extends": "next/core-web-vitals",
-  "plugins": ["@stylistic/eslint-plugin-js"],
+  "plugins": ["@stylistic/eslint-plugin-js", "@stylistic/eslint-plugin-jsx"],
   "rules": {
-    "space-before-blocks": "error",
-    "space-before-function-paren": "error",
-    "@stylistic/js/indent": ["error", 2],
-    "@stylistic/js/object-curly-spacing": ["error", "always"],
-    "semi": ["error", "always"],
-    "quotes": ["error", "single"],
-    "jsx-quotes": ["error", "prefer-single"],
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": true,
-        "ignoreDeclarationSort": true
-      }
-    ],
     "import/order": [
       1,
       {
@@ -40,20 +26,39 @@
         ],
         "pathGroupsExcludedImportTypes": ["internal"],
         "alphabetize": {
-        "order": "asc",
+          "order": "asc",
           "caseInsensitive": true
         }
       }
     ],
-    "@stylistic/js/max-len": [
-      "error",
-      {
-        "code": 80,
-        "ignoreComments": true,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreRegExpLiterals": true
-      }
-    ]
+    "jsx-quotes": ["error", "prefer-single"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "sort-imports": ["error", { "ignoreCase": true, "ignoreDeclarationSort": true }],
+    "space-before-blocks": "error",
+    "space-before-function-paren": "error",
+
+    // @STYLISTIC JS RULES
+    "@stylistic/js/array-bracket-spacing": "error",
+    "@stylistic/js/arrow-spacing": "error",
+    "@stylistic/js/block-spacing": "error",
+    "@stylistic/js/eol-last": "error",
+    "@stylistic/js/indent": ["error", 2],
+    "@stylistic/js/max-len": ["error", { "code": 80, "ignoreComments": true, "ignoreStrings": true, "ignoreTemplateLiterals": true, "ignoreRegExpLiterals": true }],
+    "@stylistic/js/object-curly-spacing": ["error", "always"],
+
+    // @STYLISTIC JSX RULES
+    "@stylistic/jsx/jsx-child-element-spacing": "error",
+    "@stylistic/jsx/jsx-closing-bracket-location": "error",
+    "@stylistic/jsx/jsx-closing-tag-location": "error",
+    "@stylistic/jsx/jsx-curly-spacing": "error",
+    "@stylistic/jsx/jsx-equals-spacing": "error",
+    "@stylistic/jsx/jsx-first-prop-new-line": "error",
+    "@stylistic/jsx/jsx-max-props-per-line": "error",
+    "@stylistic/jsx/jsx-props-no-multi-spaces": "error",
+    "@stylistic/jsx/jsx-self-closing-comp": "error",
+    "@stylistic/jsx/jsx-sort-props": "error",
+    "@stylistic/jsx/jsx-tag-spacing": "error",
+    "@stylistic/jsx/jsx-wrap-multilines": "error"
   }
 }
