@@ -24,9 +24,9 @@ const Home: React.FC<PageProps> = async ({ params: { lang } }) => {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <Button asChild>
-              <Link
-                href={hero.button.primary.link}
-              >{hero.button.primary.text}</Link>
+              <Link href={hero.button.primary.link}>
+                {hero.button.primary.text}
+              </Link>
             </Button>
             <Button variant='ghost'>
               {hero.button.secondary}
@@ -41,15 +41,22 @@ const Home: React.FC<PageProps> = async ({ params: { lang } }) => {
         <MaxWidthWrapper className='py-20'>
           <div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
             {perks.map(({ name, Icon, description }) => (
-              <div key={name} className='text-center md:flex md:text-left lg:block lg:text-center'>
+              <div
+                className='text-center md:flex md:text-left lg:block lg:text-center'
+                key={name}
+              >
                 <div className='md:flex-shrink-0 flex justify-center'>
                   <div className='h-16 w-16 flex items-center justify-center rounded-full bg-primary/10 text-primary'>
                     <Icon className='w-1/3 h-1/3' />
                   </div>
                 </div>
                 <div className='mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6'>
-                  <h3 className='font-medium text-gray-900'>{name}</h3>
-                  <p className='mt-3 text-sm text-muted-foreground'>{description}</p>
+                  <h3 className='font-medium text-gray-900'>
+                    {name}
+                  </h3>
+                  <p className='mt-3 text-sm text-muted-foreground'>
+                    {description}
+                  </p>
                 </div>
               </div>
             ))}
