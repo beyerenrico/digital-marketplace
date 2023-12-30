@@ -1,4 +1,6 @@
-import { ArrowDownToLine, CheckCircle, Leaf } from 'lucide-react';
+import {
+  ArrowDownToLine, CheckCircle, Leaf
+} from 'lucide-react';
 import { Perk } from '@/app/[lang]/dictionaries/types';
 
 const perks: Perk[] = [
