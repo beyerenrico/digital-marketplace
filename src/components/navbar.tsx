@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Cart from '@/components/cart';
+import Logo from '@/components/logo';
 import MaxWidthWrapper from '@/components/max-width-wrapper';
 import NavItems from '@/components/nav-items';
 import { buttonVariants } from '@/components/ui/button';
@@ -19,10 +20,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
 
               <div className='ml-4 flex lg:ml-0'>
                 <Link
-                  className='font-semibold'
                   href='/'
                 >
-                  Digital Marketplace
+                  <Logo />
                 </Link>
               </div>
 
@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                   {user ? null : (
                     <Link
                       className={buttonVariants({ variant: 'ghost' })}
-                      href='/signin'
+                      href='/sign-in'
                     >
                       Sign in
                     </Link>
@@ -51,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                   {user ? null : (
                     <Link
                       className={buttonVariants({ variant: 'ghost' })}
-                      href='/signup'
+                      href='/sign-up'
                     >
                       Create Account
                     </Link>
