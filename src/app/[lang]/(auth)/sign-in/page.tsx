@@ -68,6 +68,7 @@ const SigninPage: React.FC<SigninPageProps> = ({}) => {
       }
 
       router.push('/');
+      router.refresh();
     }
   });
 

@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = async ({}) => {
                   )}
 
                   {user ? (
-                    <UserAccountMenu />
+                    <UserAccountMenu user={user} />
                   ) : (
                     <Link
                       className={buttonVariants({ variant: 'ghost' })}
