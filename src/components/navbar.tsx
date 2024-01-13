@@ -5,6 +5,7 @@ import Logo from '@/components/logo';
 import MaxWidthWrapper from '@/components/max-width-wrapper';
 import NavItems from '@/components/nav-items';
 import { buttonVariants } from '@/components/ui/button';
+import UserAccountMenu from '@/components/user-account-menu';
 import { getServerSideUser } from '@/lib/payload-utils';
 
 type NavbarProps = {};
@@ -51,7 +52,9 @@ const Navbar: React.FC<NavbarProps> = async ({}) => {
                     />
                   )}
 
-                  {user ? null : (
+                  {user ? (
+                    <UserAccountMenu />
+                  ) : (
                     <Link
                       className={buttonVariants({ variant: 'ghost' })}
                       href='/sign-up'
