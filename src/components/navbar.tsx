@@ -1,14 +1,17 @@
+import { cookies } from 'next/headers';
 import Link from 'next/link';
 import Cart from '@/components/cart';
 import Logo from '@/components/logo';
 import MaxWidthWrapper from '@/components/max-width-wrapper';
 import NavItems from '@/components/nav-items';
 import { buttonVariants } from '@/components/ui/button';
+import { getServerSideUser } from '@/lib/payload-utils';
 
 type NavbarProps = {};
 
-const Navbar: React.FC<NavbarProps> = ({}) => {
-  const user = null;
+const Navbar: React.FC<NavbarProps> = async ({}) => {
+  const nextCookies = cookies();
+  const { user } = await getServerSideUser(nextCookies);
 
   return (
     <div className='bg-white sticky z-50 top-0 inset-x-0 h-16'>
